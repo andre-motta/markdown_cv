@@ -1,0 +1,164 @@
+@page {
+  size: Letter;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #404040;
+  font-family: Carlito, Calibri, Arial, sans-serif;
+  font-size: 9.2pt;
+  line-height: 1.12;
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.36in 0.47in 0.32in;
+  overflow: hidden;
+  break-after: page;
+  page-break-after: always;
+}
+
+.page:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.resume-header {
+  margin: 0 0 0.17in;
+}
+
+.resume-name {
+  margin: 0;
+  padding: 0 0 0.065in;
+  border-bottom: 0.65pt solid #b7b7b7;
+  color: #242424;
+  font-family: "Liberation Sans", Arial, sans-serif;
+  font-size: 17pt;
+  font-weight: 300;
+  letter-spacing: 2.7pt;
+  line-height: 1;
+}
+
+.contact {
+  margin: 0.085in 0 0;
+  font-size: 9.2pt;
+  line-height: 1;
+}
+
+.contact a,
+.contact .link-label {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 0.13in 0 0.055in;
+  padding: 0 0 0.032in;
+  border-bottom: 1.25pt solid #808080;
+  color: #17365d;
+  font-size: 8.6pt;
+  font-weight: 700;
+  letter-spacing: 2.35pt;
+  line-height: 1;
+}
+
+p {
+  margin: 0 0 0.04in;
+}
+
+ul {
+  margin: 0.035in 0 0.075in;
+  padding: 0 0 0 0.205in;
+  list-style-type: square;
+}
+
+li {
+  margin: 0 0 0.012in;
+  padding-left: 0.025in;
+}
+
+table {
+  width: 100%;
+  margin: 0.015in 0 0.01in;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+  font-weight: 400;
+  text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  width: 72%;
+}
+
+th:last-child,
+td:last-child {
+  width: 28%;
+  text-align: right;
+}
+
+thead th {
+  color: #17365d;
+  font-weight: 700;
+}
+
+tbody td {
+  font-style: italic;
+}
+
+.expertise {
+  column-count: 3;
+  column-gap: 0.34in;
+  margin: 0.035in 0 0.08in;
+  padding-left: 0.19in;
+  list-style-type: "-  ";
+}
+
+.expertise li {
+  break-inside: avoid;
+  margin-bottom: 0.015in;
+  padding-left: 0;
+}
+
+.page-1 h2:first-of-type {
+  margin-top: 0;
+}
+
+.page-3 > .content > ul:first-child {
+  margin-top: 0;
+  margin-bottom: 0.13in;
+}
+
+@media screen {
+  body {
+    background: #e9e9e9;
+  }
+
+  .page {
+    margin: 0.25in auto;
+    background: white;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+}
