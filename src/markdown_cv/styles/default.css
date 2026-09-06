@@ -23,13 +23,13 @@ body {
   height: 11in;
   padding: 0.36in 0.47in 0.32in;
   overflow: hidden;
-  break-after: page;
-  page-break-after: always;
-}
-
-.page:last-child {
   break-after: auto;
   page-break-after: auto;
+}
+
+.page + .page {
+  break-before: page;
+  page-break-before: always;
 }
 
 .resume-header {
